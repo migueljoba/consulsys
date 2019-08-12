@@ -28,6 +28,18 @@ public class EspecialidadService {
 		}
 
 		return especialidad;
-	}
+	}	    	
+
+    	public Optional<Especialidad> findById(Long especialidadId) {
+        	return especialidadRepository.findById(id);
+    	}
+
+    	public Product save(Especialidad especialidad) {
+        	return especialidadRepository.save(especialidad);
+    	}
+
+    	public void deleteById(Long especialidadId) {
+        	especialidadRespository.deleteById(id);
+    	}
 
 }
